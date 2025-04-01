@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Referrals - Music Tutoring Service</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Music Tutoring Logo" class="logo" />
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="booking.html">Booking</a>
+                <a href="referrals.html" class="active">Referrals</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="referrals">
+            <h1>Referral Program</h1>
+            <p>Refer a friend and get discounts on your sessions!</p>
+            <form id="referralForm">
+                <label for="refName">Your Name:</label>
+                <input type="text" id="refName" name="refName" required />
+
+                <label for="refEmail">Your Email:</label>
+                <input type="email" id="refEmail" name="refEmail" required />
+
+                <label for="friendName">Friend's Name:</label>
+                <input type="text" id="friendName" name="friendName" required />
+
+                <label for="friendEmail">Friend's Email:</label>
+                <input type="email" id="friendEmail" name="friendEmail" required />
+
+                <button type="submit" class="btn">Submit Referral</button>
+            </form>
+            <div id="referralMessage" class="hidden"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Music Tutoring Service. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

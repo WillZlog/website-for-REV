@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Music Tutoring Service - Home</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Music Tutoring Logo" class="logo" />
+            <nav>
+                <a href="index.html" class="active">Home</a>
+                <a href="booking.html">Booking</a>
+                <a href="referrals.html">Referrals</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <h1>Welcome to Our Music Tutoring Service</h1>
+            <p>Learn from the best: Ethan, Rithik, and Vihaan.</p>
+            <a href="booking.html" class="btn">Book a Session</a>
+        </section>
+
+        <!-- Team Section -->
+        <section class="team">
+            <h2>Meet Our Tutors</h2>
+            <div class="team-members">
+                <div class="member">
+                    <img src="ethan.JPG" alt="Ethan" />
+                    <h3>Ethan</h3>
+                    <p>Expert in Viola.</p>
+                    <a href="booking.html" class="btn">Book with Ethan</a>
+                </div>
+                <div class="member">
+                    <img src="rithik.JPG" alt="Rithik" />
+                    <h3>Rithik</h3>
+                    <p>Specializes in Cello.</p>
+                    <a href="booking.html" class="btn">Book with Rithik</a>
+                </div>
+                <div class="member">
+                    <img src="vihaan.JPG" alt="Vihaan" />
+                    <h3>Vihaan</h3>
+                    <p>Master of Saxophone.</p>
+                    <a href="booking.html" class="btn">Book with Vihaan</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Carousel -->
+        <section class="testimonials">
+            <h2>What Our Students Say</h2>
+            <div class="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active" data-testimonial="testimonial1">
+                        <p>"Ethan's lessons transformed my playing!"</p>
+                        <span>- Alex</span>
+                    </div>
+                    <div class="carousel-item" data-testimonial="testimonial2">
+                        <p>"Rithik's sessions are energetic and fun!"</p>
+                        <span>- Jamie</span>
+                    </div>
+                    <div class="carousel-item" data-testimonial="testimonial3">
+                        <p>"Vihan helped me compose my first song."</p>
+                        <span>- Sam</span>
+                    </div>
+                </div>
+                <button class="carousel-control prev">&lt;</button>
+                <button class="carousel-control next">&gt;</button>
+            </div>
+        </section>
+
+        <!-- Testimonial Modal -->
+        <div id="testimonialModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <div id="testimonialDetails">
+                    <!-- Detailed testimonial content will be loaded here -->
+                </div>
+            </div>
+        </div>
+
+    </main>
+    <footer>
+        <p>&copy; 2025 Music Tutoring Service. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

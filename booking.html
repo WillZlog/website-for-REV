@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Book a Session - Music Tutoring Service</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.3.2/papaparse.min.js"></script>
+</head>
+
+<body>
+    <header>
+        <div class="header-container">
+            <img src="logo.png" alt="Music Tutoring Logo" class="logo" />
+            <nav>
+                <a href="index.html">Home</a>
+                <a href="booking.html" class="active">Booking</a>
+                <a href="referrals.html">Referrals</a>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="booking">
+            <h1>Book a Session</h1>
+            <!-- Tutor Tabs -->
+            <div class="tabs">
+                <button class="tablink active" data-tab="ethan">Ethan</button>
+                <button class="tablink" data-tab="rithik">Rithik</button>
+                <button class="tablink" data-tab="vihaan">Vihaan</button>
+            </div>
+
+            <!-- Calendar View (for April 2025 as an example) -->
+            <div class="calendar-container">
+                <div class="calendar-header">
+                    <h2>April 2025</h2>
+                    <div class="day-names">
+                        <div>Sun</div>
+                        <div>Mon</div>
+                        <div>Tue</div>
+                        <div>Wed</div>
+                        <div>Thu</div>
+                        <div>Fri</div>
+                        <div>Sat</div>
+                    </div>
+                </div>
+                <div class="calendar-grid">
+                    <!-- Blank cells for days before April 1 (April 1, 2025 is a Tuesday) -->
+                    <div class="calendar-cell empty"></div>
+                    <div class="calendar-cell empty"></div>
+                    <!-- Days 1 to 30 -->
+                    <div class="calendar-cell" data-date="2025-04-01">1</div>
+                    <div class="calendar-cell" data-date="2025-04-02">2</div>
+                    <div class="calendar-cell" data-date="2025-04-03">3</div>
+                    <div class="calendar-cell" data-date="2025-04-04">4</div>
+                    <div class="calendar-cell" data-date="2025-04-05">5</div>
+                    <div class="calendar-cell" data-date="2025-04-06">6</div>
+                    <div class="calendar-cell" data-date="2025-04-07">7</div>
+                    <div class="calendar-cell" data-date="2025-04-08">8</div>
+                    <div class="calendar-cell" data-date="2025-04-09">9</div>
+                    <div class="calendar-cell" data-date="2025-04-10">10</div>
+                    <div class="calendar-cell" data-date="2025-04-11">11</div>
+                    <div class="calendar-cell" data-date="2025-04-12">12</div>
+                    <div class="calendar-cell" data-date="2025-04-13">13</div>
+                    <div class="calendar-cell" data-date="2025-04-14">14</div>
+                    <div class="calendar-cell" data-date="2025-04-15">15</div>
+                    <div class="calendar-cell" data-date="2025-04-16">16</div>
+                    <div class="calendar-cell" data-date="2025-04-17">17</div>
+                    <div class="calendar-cell" data-date="2025-04-18">18</div>
+                    <div class="calendar-cell" data-date="2025-04-19">19</div>
+                    <div class="calendar-cell" data-date="2025-04-20">20</div>
+                    <div class="calendar-cell" data-date="2025-04-21">21</div>
+                    <div class="calendar-cell" data-date="2025-04-22">22</div>
+                    <div class="calendar-cell" data-date="2025-04-23">23</div>
+                    <div class="calendar-cell" data-date="2025-04-24">24</div>
+                    <div class="calendar-cell" data-date="2025-04-25">25</div>
+                    <div class="calendar-cell" data-date="2025-04-26">26</div>
+                    <div class="calendar-cell" data-date="2025-04-27">27</div>
+                    <div class="calendar-cell" data-date="2025-04-28">28</div>
+                    <div class="calendar-cell" data-date="2025-04-29">29</div>
+                    <div class="calendar-cell" data-date="2025-04-30">30</div>
+                    <div class="calendar-cell empty"></div>
+                    <div class="calendar-cell empty"></div>
+                    <div class="calendar-cell empty"></div>
+                </div>
+            </div>
+
+            <!-- Modal for Zoomed-In Date/Time Details -->
+            <div id="calendarModal" class="modal">
+                <div class="modal-content">
+                    <span class="close calendar-close">&times;</span>
+                    <div id="calendarDetails">
+                        <!-- Available times for the selected date will be inserted here -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- Booking Confirmation -->
+            <div id="bookingConfirmation" class="hidden"></div>
+        </section>
+    </main>
+    <footer>
+        <p>&copy; 2025 Music Tutoring Service. All rights reserved.</p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+
+</html>

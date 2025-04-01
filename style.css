@@ -1,0 +1,382 @@
+/* General Styles */
+body {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #f0f0f0;
+    color: #333;
+    overflow-x: hidden;
+}
+
+/* Header and Logo */
+.header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+}
+
+header {
+    background: #333;
+    padding: 10px 0;
+}
+
+.logo {
+    height: 50px;
+    margin-left: 15px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background 0.3s, color 0.3s;
+}
+
+nav a:hover,
+nav a.active {
+    background: #fff;
+    color: #333;
+    border-radius: 5px;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 100px 20px;
+    background: url('https://via.placeholder.com/1200x400') center/cover no-repeat;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.hero h1 {
+    font-size: 3em;
+    margin-bottom: 20px;
+}
+
+.hero p {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.btn {
+    display: inline-block;
+    background: #333;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: transform 0.3s;
+}
+
+.btn:hover {
+    transform: scale(1.05);
+}
+
+/* Team Section */
+.team {
+    padding: 50px 20px;
+    background: #fff;
+    animation: fadeInUp 1s ease-in-out;
+}
+
+.team h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.team-members {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.team-members .member {
+    background: #f9f9f9;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 5px;
+    width: 280px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s;
+}
+
+.team-members .member:hover {
+    transform: translateY(-5px);
+}
+
+.team-members .member img {
+    border-radius: 50%;
+    margin-bottom: 15px;
+}
+
+/* Testimonials Carousel */
+.testimonials {
+    padding: 50px 20px;
+    background: #fff;
+    text-align: center;
+    animation: fadeIn 1s ease-in-out;
+}
+
+.testimonials h2 {
+    margin-bottom: 30px;
+}
+
+.carousel {
+    position: relative;
+    overflow: hidden;
+    max-width: 600px;
+    margin: auto;
+}
+
+.carousel-inner {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.carousel-item {
+    min-width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.carousel-item p {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+}
+
+.carousel-control {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.carousel-control.prev {
+    left: 10px;
+}
+
+.carousel-control.next {
+    right: 10px;
+}
+
+/* Modal (used for testimonials & calendar details) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 10;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background: rgba(0, 0, 0, 0.6);
+    animation: fadeIn 0.3s;
+}
+
+/* Modal Content with Zoom Effect */
+.modal-content {
+    background: #fff;
+    margin: 10% auto;
+    padding: 20px;
+    width: 90%;
+    max-width: 500px;
+    border-radius: 5px;
+    position: relative;
+    animation: zoomIn 0.4s ease;
+}
+
+.modal-content .close {
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* Booking & Referrals Sections */
+.booking,
+.referrals {
+    padding: 50px 20px;
+    background: #fff;
+    margin: 20px auto;
+    max-width: 800px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    animation: fadeIn 1s ease-in-out;
+}
+
+.booking h1,
+.referrals h1 {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+/* Tabs for Booking */
+.tabs {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.tabs .tablink {
+    background: #ccc;
+    border: none;
+    padding: 10px 20px;
+    cursor: pointer;
+    margin: 0 5px;
+    border-radius: 5px;
+    transition: background 0.3s;
+}
+
+.tabs .tablink.active {
+    background: #333;
+    color: #fff;
+}
+
+/* Calendar Styles */
+.calendar-container {
+    margin: 20px 0;
+}
+
+.calendar-header {
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+.day-names {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    text-align: center;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.calendar-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 5px;
+}
+
+.calendar-cell {
+    background: #eaeaea;
+    padding: 15px;
+    text-align: center;
+    cursor: pointer;
+    border-radius: 3px;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.calendar-cell:hover {
+    background: #d4d4d4;
+    transform: scale(1.05);
+}
+
+.calendar-cell.empty {
+    background: transparent;
+    cursor: default;
+}
+
+/* Booking Confirmation */
+#bookingConfirmation {
+    text-align: center;
+    margin-top: 20px;
+    font-weight: bold;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #333;
+    color: #fff;
+    margin-top: 40px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Utility */
+.hidden {
+    display: none;
+}
+
+/* Interactive Available Time Card Styles */
+.available-times-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+.available-time {
+    background: #fff;
+    border: 2px solid #333;
+    border-radius: 8px;
+    padding: 15px;
+    cursor: pointer;
+    transition: transform 0.3s, background 0.3s;
+    text-align: center;
+}
+
+.available-time:hover {
+    transform: scale(1.05);
+    background: #f9f9f9;
+}
+
+.book-text {
+    display: block;
+    margin-top: 5px;
+    font-size: 0.9em;
+    color: #007BFF;
+    font-weight: bold;
+}
+
+/* Zoom In Animation for Modal */
+@keyframes zoomIn {
+    from {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
